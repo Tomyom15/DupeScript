@@ -1,1 +1,77 @@
+player = game.Players.LocalPlayer
 
+if player.UserId == 2822879199 or 3450222922 or 669150224 or 2502455007 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tomyom15/DupeScript/main/DupeScriptGuii"))()
+
+print("WL Success!")
+else
+game.Players.LocalPlayer:Kick("YOU ARE NOT WHITELISTED")
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local ScriptereGui = Instance.new("Frame")
+local Axolotl = Instance.new("ImageLabel")
+local Watermark = Instance.new("TextLabel")
+local Key = Instance.new("TextBox")
+local EnterButton = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+ScriptereGui.Name = "ScriptereGui"
+ScriptereGui.Parent = ScreenGui
+ScriptereGui.BackgroundColor3 = Color3.fromRGB(43, 39, 39)
+ScriptereGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptereGui.Position = UDim2.new(0.635889828, 0, 0.633128822, 0)
+ScriptereGui.Size = UDim2.new(0, 489, 0, 299)
+ScriptereGui.Active = true
+ScriptereGui.Draggable = true
+
+Axolotl.Name = "Axolotl"
+Axolotl.Parent = ScriptereGui
+Axolotl.BackgroundColor3 = Color3.fromRGB(43, 39, 39)
+Axolotl.BorderColor3 = Color3.fromRGB(43, 39, 39)
+Axolotl.Position = UDim2.new(0.394912958, 0, 0.0628392994, 0)
+Axolotl.Size = UDim2.new(0, 100, 0, 100)
+Axolotl.Image = "rbxassetid://9362613285"
+
+Watermark.Name = "Watermark"
+Watermark.Parent = ScriptereGui
+Watermark.BackgroundColor3 = Color3.fromRGB(43, 39, 39)
+Watermark.BorderColor3 = Color3.fromRGB(43, 39, 39)
+Watermark.Position = UDim2.new(0.294288188, 0, 0.447417736, 0)
+Watermark.Size = UDim2.new(0, 200, 0, 14)
+Watermark.Font = Enum.Font.FredokaOne
+Watermark.Text = "Enter your key"
+Watermark.TextColor3 = Color3.fromRGB(255, 255, 255)
+Watermark.TextSize = 50.000
+
+Key.Name = "Key"
+Key.Parent = ScriptereGui
+Key.BackgroundColor3 = Color3.fromRGB(43, 39, 39)
+Key.BorderColor3 = Color3.fromRGB(43, 39, 39)
+Key.Position = UDim2.new(0.291498572, 0, 0.562279165, 0)
+Key.Size = UDim2.new(0, 200, 0, 50)
+Key.Font = Enum.Font.Cartoon
+Key.Text = "Type Here..."
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextSize = 30.000
+
+EnterButton.Name = "EnterButton"
+EnterButton.Parent = ScriptereGui
+EnterButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+EnterButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+EnterButton.Position = UDim2.new(0.290388554, 0, 0.729097009, 0)
+EnterButton.Size = UDim2.new(0, 200, 0, 50)
+EnterButton.Font = Enum.Font.Cartoon
+EnterButton.Text = "Enter"
+EnterButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+EnterButton.TextSize = 35.000
+EnterButton.MouseButton1Down:connect(function()
+	if Key.Text == "GOGO" then
+		ScriptereGui.Visible = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Tomyom15/DupeScript/main/DupeScriptGuii"))()
+
+	else
+		game.Players.LocalPlayer:Kick("WRONG KEY")
+	end
+end)
